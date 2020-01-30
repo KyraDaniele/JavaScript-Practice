@@ -17,3 +17,30 @@ function sayThanks() {
 sayThanks();
 sayThanks();
 sayThanks();
+
+// The sayThanks() function works well, but let’s add the customer’s name in the message. Add a parameter called name to the function declaration for sayThanks(). Using name and string concatenation, change the thank you message into the following:
+// 'Thank you for your purchase '+ name + '! We appreciate your business.'
+// A customer named Cole just purchased something from your online store. Call sayThanks() and pass 'Cole' as an argument to send Cole a personalized thank you message.
+function sayThanks(name) {
+	console.log(
+		"Thank you for your purchase " + name + "! We appreciate your business."
+	);
+}
+
+sayThanks("Cole");
+
+// Imagine that you always purchase milk, bread, and eggs every time you go shopping for groceries. To make creating a grocery list easier, let’s assign default values to the parameters in makeShoppingList().
+function makeShoppingList(item1 = "milk", item2 = "bread", item3 = "eggs") {
+	console.log(`Remember to buy ${item1}`);
+	console.log(`Remember to buy ${item2}`);
+	console.log(`Remember to buy ${item3}`);
+}
+makeShoppingList();
+
+// Declare a function monitorCount() that has two parameters. The first parameter is rows and the second parameter is columns. In the function body of the function you just wrote, use the return keyword to return rows * columns. Declare a variable named numOfMonitors using the const keyword and assign numOfMonitors the value of invoking monitorCount() with the arguments 5 and 4.
+function monitorCount(rows, columns) {
+	return rows * columns;
+}
+const numOfMonitors = monitorCount(5, 4);
+
+console.log(numOfMonitors);
