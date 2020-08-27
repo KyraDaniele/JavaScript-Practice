@@ -107,3 +107,16 @@ const arr = [1, 2, 3, 4, 5, 6];
 arr.forEach(getEvens);
 
 // 3. Square the Numbers. Write a function which takes an array of numbers as input and returns a new array containing result of squaring each of the numbers in the given array by two.
+const arr = [1, 2, 3, 4, 5, 6];
+function squaredNums(num) {
+	console.log(num * num);
+}
+arr.forEach(squaredNums);
+
+// Cities 1. Write a function which takes an array of city objects as input and returns a new array containing the cities whose temperature is cooler than 70 degrees.
+const cities = [
+	{ name: "Los Angeles", temperature: 60.0 },
+	{ name: "Atlanta", temperature: 52.0 },
+	{ name: "Detroit", temperature: 48.0 },
+	{ name: "New York", temperature: 80.0 },
+];
