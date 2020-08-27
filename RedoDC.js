@@ -1,4 +1,4 @@
-// DigitalCrafts JavaScript 101 Exercises
+// JavaScript 101 Exercises
 // 1. Write a function which given a name, says hello to the name.
 function hello(name) {
 	console.log("Hello, " + name + "!");
@@ -62,10 +62,10 @@ console.log(totalAmount(57, "fair"));
 console.log(totalAmount(29, "bad"));
 console.log(totalAmount(92, "decent"));
 
-// 6.
+// 6. Write a function splitAmount that takes the bill amount and the level of service, and the number of people to split the bill between. It will return the final amount for each person.
 let tip = 0;
 let finalBill = 0;
-function totalAmount(bill, service, people) {
+function splitAmount(bill, service, people) {
 	if (service === "good") {
 		tip = bill * 0.2;
 	} else if (service === "fair") {
@@ -77,7 +77,22 @@ function totalAmount(bill, service, people) {
 	}
 	return "Each person pays $" + (finalBill = (tip + bill) / people);
 }
-console.log(totalAmount(100, "good", 5));
-console.log(totalAmount(57, "fair", 3));
-console.log(totalAmount(29, "bad", 2));
-console.log(totalAmount(92, "decent", 7));
+console.log(splitAmount(100, "good", 5));
+console.log(splitAmount(57, "fair", 3));
+console.log(splitAmount(29, "bad", 2));
+console.log(splitAmount(92, "decent", 7));
+
+// Array, Object, and Function exercises
+
+// Function Exercises
+// Implement all of the following problems without using a while or a for loop unless you were explicitly asked to use loops.
+
+// 1. Positive Numbers - Write a function which takes an array of numbers as input and returns a new array containing only the positive numbers in the given array.
+const arr1 = [1, -4, 2, -7, 5, -8];
+const arr2 = arr1.filter((item) => item >= 0);
+console.log(arr2);
+
+// 2. Even Numbers. Write a function which takes an array of numbers as input and returns a new array containing only the even numbers in the given array.
+const arr1 = [1, -4, 2, -7, 5, -8];
+const arr2 = arr1.filter((item) => item % 2 === 0);
+console.log(arr2);
