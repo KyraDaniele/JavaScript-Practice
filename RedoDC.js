@@ -158,3 +158,9 @@ const people = [
 	"Che",
 	"Ben",
 ];
+
+people.forEach(function (name) {
+	console.log("Good job " + name + "!");
+});
+
+//
