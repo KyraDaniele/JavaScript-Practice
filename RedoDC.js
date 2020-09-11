@@ -163,4 +163,37 @@ people.forEach(function (name) {
 	console.log("Good job " + name + "!");
 });
 
-//
+// 3 times. Given this function, use the call3Times function to print "Hello, world!" 3 times.
+const helloWorld = (fun) => console.log("Hello, world!");
+function call3Times(fun) {
+	fun();
+	fun();
+	fun();
+}
+call3Times(helloWorld);
+
+// n times. You will write a function callNTimes that takes two arguments: times as a number, and fun as a function. It will call that function for that many times. You are allowed to use a loop in the implementation of callNTimes.
+function callNTimes(times, fun) {
+	if (times < 1) {
+		return;
+	}
+	fun();
+	times = times - 1;
+	callNTimes(times, fun);
+}
+
+function hello() {
+	console.log("Hello, World!");
+}
+
+callNTimes(5, hello);
+
+// Str Multiply. Write a strMultiply function which takes two arguments: str - the string to multiply and times - number of times to multiply. You may not use the native repeat method that strings provide. But you may use the following range function as is:
+
+// function range(min, max) {
+// 	const arr = [];
+// 	for (var i = min; i < max; i++) {
+// 		arr.push(i);
+// 	}
+// 	return arr;
+// }
