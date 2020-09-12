@@ -197,3 +197,60 @@ callNTimes(5, hello);
 // 	}
 // 	return arr;
 // }
+
+function strMultiply(str, times) {
+	if (times === 0) {
+		return "";
+	}
+	if (times === 1) {
+		return str;
+	} else {
+		return str + strMultiply(str, times - 1);
+	}
+}
+
+strMultiply("cat", 3);
+
+// Bonus: Array sorting. For these exercises, you'll want to refer to the MDN docs on using Array's sort method.
+
+// Sort an array. Given an array of strings such as the array of names given in one of the "Good Job" problem, sort them by alphabetically order.
+console.log(people.sort());
+
+// Sort an array 2. Sort the same array, but not by alphabetically order, but by how long each name is, shortest name first.
+people.sort(function (a, b) {
+	return a.length - b.length;
+});
+
+// Sort an array 3. Given an array of array of products, sort the array by price.
+const products = [
+	{ name: "Basketball", price: 12.0 },
+	{ name: "Tennis Racquet", price: 66.0 },
+	{ name: "Tennis Balls", price: 9.0 },
+	{ name: "Tennis Balls", price: 9.0 },
+];
+
+console.log(
+	products.sort(function (a, b) {
+		return a.price - b.price;
+	})
+);
+
+// Exercises: JavaScript 102
+
+// Print Numbers. Write a function printNumbers which is given a start number and an end number. It will print the numbers from one to the other, one per line. Write two versions of the above function. One using a while loop and the other using a for loop.
+// FOR LOOP
+function printNumbers(min, max) {
+	for (let nums = min; nums <= max; nums++) console.log(nums);
+}
+printNumbers(2, 9);
+
+// WHILE LOOP
+function printNumbers(min, max) {
+	let nums = min;
+	while (nums <= max) {
+		console.log(nums++);
+	}
+}
+printNumbers(4, 13);
+
+//
