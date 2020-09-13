@@ -260,3 +260,14 @@ function customSquare(times) {
 	}
 }
 customSquare(7);
+// OR
+function customSquare(times) {
+	let i = 1;
+	while (i <= times) {
+		i++;
+		console.log("*****");
+	}
+}
+customSquare(4);
+
+// Print a box. Write function printBox which is given a width and height and prints a hollow box of those given dimensions.
