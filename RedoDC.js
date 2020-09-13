@@ -253,4 +253,10 @@ function printNumbers(min, max) {
 }
 printNumbers(4, 13);
 
-//
+// Print a Square. Write a function printSquare which is given a size and prints a square of that size using asterisks.
+function customSquare(times) {
+	for (let i = 1; i <= times; i++) {
+		console.log("*****");
+	}
+}
+customSquare(7);
