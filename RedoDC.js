@@ -283,19 +283,33 @@ customSquare(4, 3);
 // Print a box. Write function printBox which is given a width and height and prints a hollow box of those given dimensions.
 function printBox(width, height) {
 	for (let row = 1; row <= width; row++) {
-		let tbd = "";
+		let x = "";
 		for (let column = 1; column <= height; column++) {
 			if (column == 1 || column == height) {
-				tbd += "*";
+				x += "*";
 			} else {
 				if (row == 1 || row == width) {
-					tbd += "*";
+					x += "*";
 				} else {
-					tbd += " ";
+					x += " ";
 				}
 			}
 		}
-		console.log(tbd);
+		console.log(x);
 	}
 }
-printBox(5, 10);
+printBox(5, 7);
+
+// Print a Banner. Write a function printBanner which is given some text and prints a banner with a border surrounding the text. The border has to stretch to the length of the text.
+function printBanner(string) {
+	const stringLength = string.length;
+	let x = "";
+	const text = "*" + string + "*";
+	for (let row = 1; row <= stringLength + 2; row++) {
+		x += "*";
+	}
+	console.log(x);
+	console.log(text);
+	console.log(x);
+}
+printBanner("Kyra is a nerd, haha.");
