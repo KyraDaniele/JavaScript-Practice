@@ -269,5 +269,33 @@ function customSquare(times) {
 	}
 }
 customSquare(4);
+// OR
+function customSquare(columns, rows) {
+	let i = 1;
+	let a = 1;
+	while (i <= columns && a <= rows) {
+		i++;
+		console.log("*".repeat(rows));
+	}
+}
+customSquare(4, 3);
 
 // Print a box. Write function printBox which is given a width and height and prints a hollow box of those given dimensions.
+function printBox(width, height) {
+	for (let row = 1; row <= width; row++) {
+		let tbd = "";
+		for (let column = 1; column <= height; column++) {
+			if (column == 1 || column == height) {
+				tbd += "*";
+			} else {
+				if (row == 1 || row == width) {
+					tbd += "*";
+				} else {
+					tbd += " ";
+				}
+			}
+		}
+		console.log(tbd);
+	}
+}
+printBox(5, 10);
