@@ -313,3 +313,18 @@ function printBanner(string) {
 	console.log(x);
 }
 printBanner("Kyra is a nerd, haha.");
+
+// Factor a Number. Write a function which is given a number and returns an array containing all its factors.
+function factors(number) {
+	let factorsArray = [];
+	for (let factorNum = 1; factorNum <= number; factorNum++) {
+		if (number % factorNum === 0) {
+			factorsArray.push(factorNum);
+		}
+	}
+	console.log(factorsArray);
+}
+factors(12);
+factors(25);
+
+// Caesar Cipher. Write a function cipher which is given a string, an offset, and returns the Caesar cipher of the string.
