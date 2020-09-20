@@ -328,3 +328,25 @@ factors(12);
 factors(25);
 
 // Caesar Cipher. Write a function cipher which is given a string, an offset, and returns the Caesar cipher of the string.
+
+// I'll come back to this one
+
+// Caesar Cipher 2. Write a function decipher which is given a string, an offset, and returns the original message.
+
+// I'll come back to this one
+
+// Leetspeak. Write a function leetspeak which is given a string, and returns the leetspeak equivalent of the string.
+function leetSpeak(string) {
+	const leetKey = { A: "4", E: "3", G: "6", I: "1", O: "0", S: "5", T: "7" };
+	let newString = string.toUpperCase();
+	for (let key in leetKey) {
+		for (let char in newString) {
+			if (char == key) {
+				console.log(newString.replace(char, key));
+			}
+		}
+	}
+}
+
+leetSpeak("Too cool, too leet");
+// NOT DONE -----------
